@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --Soft-red: hsl(7, 99%, 70%);
+    --Yellow: hsl(51, 100%, 49%);
+    --Dark-desaturated-cyan: hsl(167, 40%, 24%);
+    /*(graphic design text)*/
+    --Dark-blue: hsl(198, 62%, 26%);
+    /* (photography text)*/
+    --Dark-moderate-cyan: hsl(168, 34%, 41%);
+    /* (footer)*/
+    --light-moderate-cyan: hsl(169, 65%, 68%);
+    --Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --Very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --Dark-grayish-blue: hsl(232, 10%, 55%);
+    --Grayish-blue: hsl(210, 4%, 67%);
+    --White: hsl(0, 0%, 100%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-family: 'Fraunces', serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 700px 600px 600px 600px 650px 500px 350px;
+}
+
+header,
+.clients,
+footer {
+    grid-column: 1 / span 4;
+}
+
+.white,
+.cup,
+.cherry {
+    grid-column: 1 / span 2;
+}
+
+.egg,
+.white2,
+.fl-org {
+    grid-column: 3 / span 2;
+}
+
+/*              --------------------HEADER SECTION-------------------
+======================================================================*/
+header {
+    background-image: url(./images/desktop/image-header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 1.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    transition: smooth 0.5s
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+nav ul li .button {
+    color: black;
+    background-color: var(--White);
+    padding: 9px 20px;
+    border-radius: 20px;
+    font-family: 'Fraunces', serif;
+}
+
+nav ul li .button:hover {
+    background-color: rgb(104, 196, 235);
+    cursor: pointer;
+    color: var(--White);
+}
+
+nav .burger {
+    display:none;
+}
+
+header .hd-txt {
+    margin-top: 4rem;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 46px;
+}
+
+header .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+}
+
+/*           ==================ABOUT SECTION==================
+======================================================================= */
+.egg {
+    background-image: url(./images/desktop/image-transform.jpg);
+    background-position: center;
+    background-size: contain;
+    object-position: center;
+}
+
+.cup {
+    background-image: url(./images/desktop/image-stand-out.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.white,
+.white2 {
+    background-color: var(--White);
+}
+
+.white .content,
+.white2 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    margin: 10rem 6rem 0 8rem;
+}
+
+.content h3 {
+    color: var(--Very-dark-desaturated-blue);
+    font-size: 36px;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.content p {
+    font-family: 'Barlow', sans-serif;
+    color: var(--Dark-grayish-blue);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+    font-size: 18px;
+}
+
+.content a {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: solid;
+    color: var(--Very-dark-desaturated-blue);
+    position: relative;
+    z-index: 1;
+}
+
+.content a::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    bottom: 0;
+    z-index: -1;
+    left: 0;
+    height: 0.5rem;
+    background-color: hsl(51, 100%, 49%, 0.3);
+    transition:0.3 ease-in-out;
+}
+
+.content a:hover::after {
+    background-color: var(--Yellow);
+}
+
+.content-a a::after{
+    background-color:hsl(7, 99%, 70%, 0.3);
+}
+
+.content-a a:hover::after{
+    background-color:var(--Soft-red);
+}
+
+
+/* =========================THE FOURTH ROW========================*/
+.cherry {
+    background-image: url(./images/desktop/image-graphic-design.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.fl-org {
+    background-image: url(./images/desktop/image-photography.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.content2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 23rem 9rem 0;
+    text-align: center;
+}
+
+.content2 h3 {
+    color: var(--Dark-desaturated-cyan);
+    font-size: 25px;
+    margin-bottom: 2rem;
+    font-weight: 900;
+}
+
+.content2 p {
+    font-family: 'Barlow', sans-serif;
+    color: var(--Dark-desaturated-cyan);
+    font-weight: 300;
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+    font-size: 16px;
+}
+
+.fl-org .content2 h3,
+.fl-org .content2 p {
+    color: var(--Dark-blue);
+}
+
+/* =========================CLIENT SECTION========================== */
+.clients .content3 h3 {
+    margin: 10rem 0 5rem 0;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2em;
+    color: var(--Grayish-blue);
+}
+
+.cl-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 4rem;
+}
+
+.cl-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.cl-cards .card img {
+    width: 70px;
+    border-radius: 50%;
+    margin-bottom: 4rem;
+}
+
+.cl-cards .card p {
+    color: var(--Very-dark-grayish-blue);
+    margin-bottom: 4rem;
+    font-family: 'Barlow', sans-serif;
+    line-height: 1.8rem;
+}
+
+.cl-cards .card h4 {
+    color: var(--Very-dark-desaturated-blue);
+    font-weight: 900;
+    margin-bottom: 0.7rem;
+}
+
+.cl-cards .card h5 {
+    color: var(--Grayish-blue);
+    font-weight: 100;
+    font-size: 14px;
+    font-family: 'Barlow', sans-serif;
+}
+
+/* ===========================PROJECTS SECTION================== */
+.milk {
+    background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.orange {
+    background-image: url(./images/desktop/image-gallery-orange.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.cone {
+    background-image: url(./images/desktop/image-gallery-cone.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+.sugar {
+    background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
+    background-position: center;
+    background-size: cover;
+    object-position: center;
+    object-fit: contain;
+}
+
+/* ========================FOOTER SECTION=================== */
+footer {
+    background-color: var(--light-moderate-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer img {
+    color: var(--Dark-desaturated-cyan);
+    width: 15%;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+footer ul li a {
+    font-family: 'Barlow', sans-serif;
+    text-decoration: none;
+    color: var(--Dark-desaturated-cyan);
+}
+
+footer ul li a:hover {
+    color: var(--White);
+}
+
+footer .icons img {
+    width: 20px;
+    margin: 5rem 2rem 0 0;
+}
+
+footer .icons .icon:hover {
+    color: var(--White);
+
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* ===============================MEDIA QUERIES===================== */
+@media (max-width:768px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 600px 400px 400px 400px 400px 500px 500px 700px 300px 300px;
+    }
+
+    header,
+    .clients,
+    footer,
+    .egg,
+    .white2,
+    .fl-org,
+    .white,
+    .cup,
+    .cherry {
+        grid-column: 1 / span 2;
+    }
+
+    header .arrow {
+        margin-top: 4rem;
+    }
+
+    .egg {
+        background-image: url(./images/mobile/image-transform.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .cup {
+        background-image: url(./images/mobile/image-stand-out.jpg);
+    }
+
+    .white .content,
+    .white2 .content {
+        margin: 4rem 6rem 0 8rem;
+    }
+
+    /* ==========FOURTH SECTION================== */
+    .content2 {
+        margin: 19rem 9rem 0;
+    }
+
+    /* ======================PROJECTS SECTION===================== */
+    .milk {
+        background-image: url(./images/mobile/image-gallery-milkbottles.jpg);
+        background-position: center;
+        background-size: cover;
+        object-position: center;
+        object-fit: contain;
+    }
+
+    .orange {
+        background-image: url(./images/mobile/image-gallery-orange.jpg);
+        background-position: center;
+        background-size: cover;
+        object-position: center;
+        object-fit: contain;
+    }
+
+    .cone {
+        background-image: url(./images/mobile/image-gallery-cone.jpg);
+        background-position: center;
+        background-size: cover;
+        object-position: center;
+        object-fit: contain;
+    }
+
+    .sugar {
+        background-image: url(./images/mobile/image-gallery-sugar-cubes.jpg);
+        background-position: center;
+        background-size: cover;
+        object-position: center;
+        object-fit: contain;
+    }
+
+}
+
+@media (max-width:425px) {
+    .container {
+        grid-template-rows: 600px 400px 400px 400px 400px 500px 500px 900px 170px 170px 250px;
+    }
+
+    header {
+        background-image: url(./images/mobile/image-header.jpg);
+    }
+
+    nav{
+        position:relative;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--White);
+        position:absolute;
+        top:70px;
+        right:0;
+        left:0;
+        padding:1.5rem 5rem;
+        gap:40px;
+        display:none;
+        transition: 500ms ease-in-out;
+    }
+
+    .show{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav ul li a{
+        color:var(--Dark-grayish-blue);
+    }
+
+    nav ul li:last-child > a{
+        background-color: var(--Yellow);
+    }
+
+    header .triangle{
+       position:absolute;
+       top:70px;
+       right:24px;
+       width:50px;
+       height:50px;
+       background-image: linear-gradient(to bottom right, transparent 50%, white 0);
+       background-size:100%;
+       background-repeat:no-repeat;
+       background-position:left,right;
+       display:none;
+       transition: 500ms ease-in-out;
+    }
+
+    header .display{
+        display:block;
+    }
+
+    nav .burger {
+        content:url(./images/icon-hamburger.svg);
+        display: block;
+    }
+
+    .white .content,
+    .white2 .content {
+        text-align: center;
+        margin: 6rem 2rem 0 2rem;
+    }
+
+    .content2 {
+        margin: 19rem 0.7rem;
+    }
+
+    .clients .content3 h3 {
+        margin: 3rem 0 2rem 0;
+    }
+
+    .cl-cards {
+        flex-direction: column;
+        margin: 0 2rem;
+    }
+
+    .cl-cards .card {
+        margin-bottom: 1rem;
+    }
+
+    .cl-cards .card p {
+        margin-bottom: 1rem;
+        font-size: 16px;
+        line-height: 1.5rem;
+    }
+
+    .cl-cards .card img {
+        margin-bottom: 2rem;
+    }
+
+    footer {
+        gap: 20px;
+    }
+
+    footer img {
+        color: var(--Dark-desaturated-cyan);
+        width: 35%;
+    }
+
+    footer ul {
+        gap: 30px;
+    }
+
+    footer .icons img {
+        width: 20px;
+        margin: 3rem 1rem 0 0;
+    }
+
+}
+
+@media (max-width:375px) {
+    body {
+        width: 100%;
+    }
+
+    header .hd-txt {
+        letter-spacing: 0.1em;
+    }
+
+    .white .content,
+    .white2 .content {
+        text-align: center;
+        margin: 3rem 2rem 0 2rem;
+    }
+
+    .content a::after {
+        width: 140px;
+        bottom: 0;
+        left: 88px;
+    }
+}
